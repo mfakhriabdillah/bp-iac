@@ -3,6 +3,7 @@ resource "google_compute_firewall" "rules" {
   name        = var.firewall_rule_id
   network     = var.network_id
   description = "Creates firewall rule targeting tagged instances"
+  source_ranges = ["0.0.0.0/0"]
 
   allow {
     protocol  = "tcp"
