@@ -1,5 +1,4 @@
 provider "google" {
-  credentials = file("studidevops-bigpro-fakhri-8c0153e110c9.json")
   project     = "studidevops-bigpro-fakhri"
   region      = "us-central1"
 }
