@@ -63,13 +63,13 @@ module "devops_bastion" {
   subnet        = module.bigpro_subnet.subnet_id
   ssh_pubkey = "fakhri:ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDMKsCC8rJUvA8jwemWvMdk2RQ0VheM71DAXqi6tCqg8R8+DUp9p76GudmKOlIe/PnagAaJYTDSQDGujKfugiUObVDOlVrDL8wKrz3sTsXXeg7K8JUiDC4EAYrgf+MW2ETCf2mTKxF30pdU+7ZOLBKwH45spT1ZNyHOHpybG+k859zVzY87XKDsrPL8S1wfe6eET6TrXHuRPyPAkYqbLYseQtu2Ua132NioNcW68So356HTEsRHQrHnc7xHSFol+8NfGy/QRPiTy5zvYhqA8LzolX6K56I3nIA7dQ20GqxrKD+JtZPKEftRYQhPEqvlwPrD6vFV16ZImixNfT6108kbqxYjkbJFB9KK91D1PE2rQovJmYmAzQE8FEK4H7uIwfdr73wdlO0LmGmjopzUpEIxXrysUfhUItW48LjqZgxOxG/jVj4wIRKC7MhFrcLzxnMasZKcWgEWw/ohebRuhmP0tdh03rgb7Ihq09XuCER1Xtxukbg5TP91bjnLI4VDu/c= faseero0@mint"
   desired_status = "TERMINATED"
-  metadata_startup_script = <<-EOF
-    export TOKEN='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'
-    export USERNAME='mfakhriabdillah'
-    export SECRET='Atlantis123'
-    export IP_ADDRESS='${curl -s ifconfig.me}'
-    sudo atlantis server --atlantis-url="http://IP_ADDRESS" --gh-user=$USERNAME --gh-token=$TOKEN --gh-webhook-secret=$SECRET --repo-allowlist="github.com/mfakhriabdillah/bp-iac" --port=80
-  EOF
+#   metadata_startup_script = <<-EOF
+#     export TOKEN='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'
+#     export USERNAME='mfakhriabdillah'
+#     export SECRET='Atlantis123'
+#     export IP_ADDRESS='${curl -s ifconfig.me}'
+#     sudo atlantis server --atlantis-url="http://IP_ADDRESS" --gh-user=$USERNAME --gh-token=$TOKEN --gh-webhook-secret=$SECRET --repo-allowlist="github.com/mfakhriabdillah/bp-iac" --port=80
+#   EOF
 }
 
 module "jenkins_instance" {
