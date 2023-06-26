@@ -17,3 +17,11 @@ variable "project_id" {
 variable "database_name" {
   type = string
 }
+
+variable "user_name" {
+  type = string
+}
+
+variable "passwd" {
+  type = string
+}

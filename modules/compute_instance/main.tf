@@ -22,5 +22,6 @@ resource "google_compute_instance" "compute_instance" {
     ssh-keys = var.ssh_pubkey
   }
 
+  desired_status = var.desired_status
   // Add any additional configuration options as needed
 }
