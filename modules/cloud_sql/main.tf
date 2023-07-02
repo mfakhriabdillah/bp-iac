@@ -1,3 +1,8 @@
+provider "google" {
+  project     = var.project_id
+  region      = "us-central1"
+}
+
 resource "google_sql_database_instance" "sql_instance" {
   name             = var.instance_name
   database_version = var.database_version

@@ -1,3 +1,8 @@
+provider "google" {
+  project     = "studidevops-bigpro-fakhri"
+  region      = "us-central1"
+}
+
 resource "google_compute_instance" "compute_instance" {
   name         = var.instance_name
   machine_type = var.machine_type
