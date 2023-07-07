@@ -1,3 +1,8 @@
+provider "google" {
+  project     = "studidevops-bigpro-fakhri"
+  region      = "us-central1"
+}
+
 resource "google_compute_instance" "compute_instance" {
   name         = var.instance_name
   machine_type = var.machine_type
@@ -22,5 +27,6 @@ resource "google_compute_instance" "compute_instance" {
     ssh-keys = var.ssh_pubkey
   }
 
+  desired_status = var.desired_status
   // Add any additional configuration options as needed
 }

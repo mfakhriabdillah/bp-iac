@@ -1,3 +1,7 @@
+provider "google" {
+  project     = "studidevops-bigpro-fakhri"
+  region      = "us-central1"
+}
 resource "google_compute_firewall" "rules" {
   project     = var.project_id
   name        = var.firewall_rule_id

@@ -36,3 +36,8 @@ variable "subnet" {
 variable "ssh_pubkey" {
   type = string
 }
+
+variable "desired_status" {
+  type = string
+  default = "RUNNING"
+}
